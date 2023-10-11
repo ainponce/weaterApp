@@ -3,5 +3,13 @@
 }
 
 .card-color{
-    background-color: #c7d7f1;
+    background-color: #777777;
+}
+
+.card-subtitle{
+    color: #ffffff;
+}
+
+.card-title{
+    color: #ffffff;
 }
