@@ -55,7 +55,12 @@ public class WeatherController {
     }
 
     private String getDateTimeFormated(String pattern, LocalDateTime localDateTime) {
-        return DateTimeFormatter.ofPattern(pattern).format(localDateTime);
+        if (localDateTime != null) {
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
+            return localDateTime.format(formatter);
+        } else {
+            return "Fecha no disponible";
+        }
     }
 
     private void setUpScheduler() throws InterruptedException {
